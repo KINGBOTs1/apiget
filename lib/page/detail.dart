@@ -13,7 +13,9 @@ class _DetailState extends State<Detail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.nama!)),
-      body: Column(children: [Image(image: NetworkImage(widget.foto!))]),
+      body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(children: [Image(image: NetworkImage(widget.foto!))])),
     );
   }
 }
